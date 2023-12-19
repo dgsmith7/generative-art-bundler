@@ -32,7 +32,9 @@ let container,
   geometry0,
   geometry1,
   geometry2,
-  material,
+  material0,
+  material1,
+  material2,
   mesh0,
   mesh1,
   mesh2,
@@ -41,7 +43,11 @@ let screenShotDone = false;
 
 function init() {
   scene = new Scene();
-  scene.background = new Color(0x000000);
+  scene.background = new Color(
+    baconRand.rand(),
+    baconRand.rand(),
+    baconRand.rand()
+  );
   setCamera();
   setLights();
   buildRenderer();
@@ -115,17 +121,25 @@ function onWindowResize() {
 function buildIt() {
   //  put all of your geometry and materials in here
   geometry0 = new BoxGeometry(10, 16.18, 0.1);
-  material = new MeshPhongMaterial({
-    color: "purple",
+  material0 = new MeshPhongMaterial({
+    color: new Color(baconRand.rand(), baconRand.rand(), baconRand.rand()),
     side: DoubleSide,
   });
-  mesh0 = new Mesh(geometry0, material);
+  material1 = new MeshPhongMaterial({
+    color: new Color(baconRand.rand(), baconRand.rand(), baconRand.rand()),
+    side: DoubleSide,
+  });
+  material2 = new MeshPhongMaterial({
+    color: new Color(baconRand.rand(), baconRand.rand(), baconRand.rand()),
+    side: DoubleSide,
+  });
+  mesh0 = new Mesh(geometry0, material0);
   scene.add(mesh0);
   geometry1 = new BoxGeometry(16.18, 0.1, 10);
-  mesh1 = new Mesh(geometry1, material);
+  mesh1 = new Mesh(geometry1, material1);
   scene.add(mesh1);
   geometry2 = new BoxGeometry(0.1, 10, 16.18);
-  mesh2 = new Mesh(geometry2, material);
+  mesh2 = new Mesh(geometry2, material2);
   scene.add(mesh2);
   console.log(scene);
 }
