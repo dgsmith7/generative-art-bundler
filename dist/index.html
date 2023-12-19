@@ -65,7 +65,7 @@
     let h = "" + Array(16).fill(0).map(_ => "0123456789abcdef"[(randy() * 16) | 0]).join("");
 
     let tokenData = {// remove this and sub in real tokenData here with string eventually
-      "tokenHash": "0123456789abcdef", //h
+      "tokenHash": h,//"0123456789abcdef", //h
       "tokenId": "0000000000000000",
       "projectName": "Test",
       "artistName": "Lester the Tester",
