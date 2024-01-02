@@ -3,7 +3,7 @@
 Original code by David Gail Smith, February 2022
 Twitter: @davidgailsmith
 http://baconbitscollective.org
-A simple JS starter template for THREE js projects on 1ofX
+A simple JS starter template for THREE js projects
 */ //////////////////////////////////////////////////////////
 "use strict";
 
@@ -52,7 +52,6 @@ function init() {
   setLights();
   buildRenderer();
   container = renderer.domElement;
-  console.log(container);
   //  document.querySelector("#mural").appendChild(container);
   document.body.appendChild(container);
   buildIt();
@@ -141,7 +140,6 @@ function buildIt() {
   geometry2 = new BoxGeometry(0.1, 10, 16.18);
   mesh2 = new Mesh(geometry2, material2);
   scene.add(mesh2);
-  console.log(scene);
 }
 
 function addOrbitControls() {

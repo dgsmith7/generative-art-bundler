@@ -1,6 +1,8 @@
 # generative-art-bundler
 
-Artists, use baconRand.rand() in place of Math.random() in your sketches
+Adapted from: https://github.com/Sean-Bradley/Three.js-TypeScript-Boilerplate
+
+Artists, use baconRand.rand() in place of Math.random() in your sketches.
 
 THREE.js and P5js are available dependecies.
 
