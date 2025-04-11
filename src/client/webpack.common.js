@@ -1,6 +1,8 @@
 const path = require("path");
 
 module.exports = {
+  // set your entry project below
+  mode: "production",
   entry: "./src/client/index.js",
   module: {
     rules: [
